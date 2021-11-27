@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EMIGRANT.Data
+namespace EMIGRANT.Model
 {
     using System;
     using System.Data.Entity;

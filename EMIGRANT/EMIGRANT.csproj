@@ -172,48 +172,48 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Data\AspNetRoles.cs">
+    <Compile Include="Model\AspNetRoles.cs">
       <DependentUpon>ModelEmigrantApp.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\AspNetUserClaims.cs">
+    <Compile Include="Model\AspNetUserClaims.cs">
       <DependentUpon>ModelEmigrantApp.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\AspNetUserLogins.cs">
+    <Compile Include="Model\AspNetUserLogins.cs">
       <DependentUpon>ModelEmigrantApp.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\AspNetUsers.cs">
+    <Compile Include="Model\AspNetUsers.cs">
       <DependentUpon>ModelEmigrantApp.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\C__MigrationHistory.cs">
+    <Compile Include="Model\C__MigrationHistory.cs">
       <DependentUpon>ModelEmigrantApp.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\Migrante.cs">
+    <Compile Include="Model\Migrante.cs">
       <DependentUpon>ModelEmigrantApp.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\ModelEmigrantApp.Context.cs">
+    <Compile Include="Model\ModelEmigrantApp.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEmigrantApp.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\ModelEmigrantApp.cs">
+    <Compile Include="Model\ModelEmigrantApp.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEmigrantApp.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\ModelEmigrantApp.Designer.cs">
+    <Compile Include="Model\ModelEmigrantApp.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelEmigrantApp.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Data\sysdiagrams.cs">
+    <Compile Include="Model\sysdiagrams.cs">
       <DependentUpon>ModelEmigrantApp.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Data\AccountViewModels.cs" />
+    <Compile Include="Data\IdentityModels.cs" />
+    <Compile Include="Data\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -222,12 +222,12 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Data\ModelEmigrantApp.Context.tt">
+    <Content Include="Model\ModelEmigrantApp.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelEmigrantApp.edmx</DependentUpon>
       <LastGenOutput>ModelEmigrantApp.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Data\ModelEmigrantApp.tt">
+    <Content Include="Model\ModelEmigrantApp.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelEmigrantApp.edmx</DependentUpon>
       <LastGenOutput>ModelEmigrantApp.cs</LastGenOutput>
@@ -238,11 +238,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Data\ModelEmigrantApp.edmx">
+    <EntityDeploy Include="Model\ModelEmigrantApp.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelEmigrantApp.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Data\ModelEmigrantApp.edmx.diagram">
+    <Content Include="Model\ModelEmigrantApp.edmx.diagram">
       <DependentUpon>ModelEmigrantApp.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
