@@ -2,3 +2,213 @@
 @model MyApp.Namespace.EditModel
 @{
 }
+<div>
+    <header>
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <h2>Editar entidad</h2>
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container align-content-center">
+            <form method="POST">
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Entidad.Id"></label>
+                            <input type="hidden" asp-for="Entidad.Id" class="form-control">
+                            <span class="text-danger" asp-validation-for="Entidad.Id"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Entidad.RazonSocial"></label>
+                            <input asp-for="Entidad.RazonSocial" class="form-control">
+                            <span class="text-danger" asp-validation-for="Entidad.RazonSocial"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Entidad.Nit"></label>
+                            <input asp-for="Entidad.Nit" class="form-control">
+                            <span class="text-danger" asp-validation-for="Entidad.Nit"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Entidad.Direccion"></label>
+                            <input asp-for="Entidad.Direccion" class="form-control">
+                            <span class="text-danger" asp-validation-for="Entidad.Direccion"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Entidad.Ciudad"></label>
+                            <input asp-for="Entidad.Ciudad" class="form-control">
+                            <span class="text-danger" asp-validation-for="Entidad.Ciudad"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Entidad.Telefono"></label>
+                            <input asp-for="Entidad.Telefono" class="form-control">
+                            <span class="text-danger" asp-validation-for="Entidad.Telefono"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Entidad.CorreoElectronico"></label>
+                            <input asp-for="Entidad.CorreoElectronico" class="form-control">
+                            <span class="text-danger" asp-validation-for="Entidad.CorreoElectronico"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Entidad.PaginaWeb"></label>
+                            <input asp-for="Entidad.PaginaWeb" class="form-control">
+                            <span class="text-danger" asp-validation-for="Entidad.PaginaWeb"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label asp-for="SectorId"></label>
+                                    <select asp-for="SectorId" class="form-control">
+                                        @foreach (var sector in Model.Sectores)
+                                        {
+                                            <option value="@sector.Id">@sector.Nombre</option>
+                                        }
+                                    </select>
+                                    <span class="text-danger" asp-validation-for="SectorId" style="width: 100%;"></span>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label asp-for="TipoServicioId"></label>
+                                    <select asp-for="TipoServicioId" class="form-control">
+                                        @foreach (var tipoServicio in Model.TiposServicio)
+                                        {
+                                            <option value="@tipoServicio.Id">@tipoServicio.Nombre</option>
+                                        }
+                                    </select>
+                                    <span class="text-danger" asp-validation-for="TipoServicioId" style="width: 100%;"></span>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-3">
+                        <div>
+                            <button type="submit" class="btn btn-success">
+                                Actualizar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div>
+                            <a class="btn btn-primary" asp-page="./ListEntidades">
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</div>
