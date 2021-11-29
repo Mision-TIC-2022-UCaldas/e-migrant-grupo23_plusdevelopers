@@ -20,9 +20,8 @@
             <th>Fecha</th>
             <th>Número días</th>
             <th>Texto explicativo</th>
-            <th>Detalles</th>
             <th>Modificar</th>
-            <th>Eliminar</th>
+            <th>Actualizar estado</th>
         </tr>
         @foreach (var novedad in Model.Novedades)
         {
@@ -30,11 +29,6 @@
                 <td>@novedad.Fecha.Date.ToString()</td>
                 <td>@novedad.NumeroDias</td>
                 <td>@novedad.TextoExplicativo</td>
-                <td class="text-center">
-                    <a class="btn btn-secondary table-btn" asp-page="./Details" asp-route-IdNovedad="@novedad.Id">
-                        <i class="fas fa-search"></i>
-                    </a>
-                </td>
                 <td class="text-center">
                     <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-IdNovedad="@novedad.Id">
                         <i class="far fa-edit"></i>

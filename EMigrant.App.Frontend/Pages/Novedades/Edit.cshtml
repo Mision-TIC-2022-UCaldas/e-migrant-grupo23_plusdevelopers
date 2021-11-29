@@ -2,3 +2,109 @@
 @model MyApp.Namespace.EditNovedadesModel
 @{
 }
+<div>
+    <header>
+        <div class="row">
+            <div class="col-4">
+
+            </div>
+            <div class="col-4">
+                <h2>Editar novedad</h2>
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container align-content-center">
+            <form method="POST">
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Novedad.Id"></label>
+                            <input type="hidden" asp-for="Novedad.Id" class="form-control">
+                            <span class="text-danger" asp-validation-for="Novedad.Id"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Novedad.Fecha"></label>
+                            <input type="date" asp-for="Novedad.Fecha" class="form-control">
+                            <span class="text-danger" asp-validation-for="Novedad.Fecha"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Novedad.NumeroDias"></label>
+                            <input asp-for="Novedad.NumeroDias" class="form-control">
+                            <span class="text-danger" asp-validation-for="Novedad.NumeroDias"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label asp-for="Novedad.TextoExplicativo"></label>
+                            <input asp-for="Novedad.TextoExplicativo" class="form-control">
+                            <span class="text-danger" asp-validation-for="Novedad.TextoExplicativo"></span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+
+                    </div>
+                    <div class="col-3">
+                        <div>
+                            <button type="submit" class="btn btn-success">
+                                Actualizar
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div>
+                            <a class="btn btn-primary" asp-page="./List">
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</div>

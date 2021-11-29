@@ -5,7 +5,7 @@ using EMigrant.App.Dominio.Entidades;
 
 namespace EMigrant.App.Persistencia.AppRepositorios
 {
-    public class RepositorioNovedad
+    public class RepositorioNovedad: IRepositorioNovedad
     {
         private readonly AppContext appContext;
 

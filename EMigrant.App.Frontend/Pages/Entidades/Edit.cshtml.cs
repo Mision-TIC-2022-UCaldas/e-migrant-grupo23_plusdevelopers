@@ -60,7 +60,6 @@ namespace MyApp.Namespace
 
                 return OnGet(idEntidad);
             }
-            
         }
     }
 }

@@ -9,7 +9,7 @@ namespace EMigrant.App.Persistencia.AppRepositorios
         Novedad CrearNovedad(Novedad novedad);
         Novedad ActualizarNovedad(Novedad novedad);
         void EliminarNovedad(int idNovedad);
-        Sector ObtenerNovedad(int idNovedad);
+        Novedad ObtenerNovedad(int idNovedad);
         IEnumerable<Novedad> ObtenerTodasLasNovedades();
     }
 }
