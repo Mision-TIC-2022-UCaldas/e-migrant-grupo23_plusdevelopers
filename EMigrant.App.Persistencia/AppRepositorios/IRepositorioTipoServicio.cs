@@ -6,10 +6,10 @@ namespace EMigrant.App.Persistencia.AppRepositorios
 {
     public interface IRepositorioTipoServicio
     {
-        Sector CrearTipoServicio(TipoServicio tipoServicio);
-        Sector ActualizarTipoServicio(TipoServicio tipoServicio);
+        TipoServicio CrearTipoServicio(TipoServicio tipoServicio);
+        TipoServicio ActualizarTipoServicio(TipoServicio tipoServicio);
         void EliminarTipoServicio(int idTipoServicio);
-        Sector ObtenerTipoServicio(int idTipoServicio);
+        TipoServicio ObtenerTipoServicio(int idTipoServicio);
         IEnumerable<TipoServicio> ObtenerTodosLosTiposServicio();
     }
 }

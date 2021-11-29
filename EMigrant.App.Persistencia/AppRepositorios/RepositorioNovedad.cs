@@ -23,6 +23,7 @@ namespace EMigrant.App.Persistencia.AppRepositorios
                 novedadEncontrada.Fecha = novedad.Fecha;
                 novedadEncontrada.NumeroDias = novedad.NumeroDias;
                 novedadEncontrada.TextoExplicativo = novedad.TextoExplicativo;
+                novedadEncontrada.Estado = novedad.Estado;
                 appContext.SaveChanges();
             }
             return novedadEncontrada;

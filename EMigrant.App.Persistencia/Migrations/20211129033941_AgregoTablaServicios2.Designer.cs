@@ -4,14 +4,16 @@ using EMigrant.App.Persistencia.AppRepositorios;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EMigrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(Persistencia.AppRepositorios.AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20211129033941_AgregoTablaServicios2")]
+    partial class AgregoTablaServicios2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,8 +83,8 @@ namespace EMigrant.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<bool>("Estado")
-                        .HasColumnType("bit");
+                    b.Property<string>("Estado")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("datetime2");
@@ -142,7 +144,7 @@ namespace EMigrant.App.Persistencia.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Servicios");
+                    b.ToTable("Serviios");
                 });
 
             modelBuilder.Entity("EMigrant.App.Dominio.Entidades.TipoServicio", b =>

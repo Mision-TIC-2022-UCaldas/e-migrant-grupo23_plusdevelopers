@@ -15,6 +15,6 @@ namespace EMigrant.App.Dominio.Entidades
         [Required(ErrorMessage = "El texto explicativo es necesario.")]
         [StringLength(100, ErrorMessage = "No puede tener más de 100 caracteres.")]
         public string TextoExplicativo { get; set; }
-        //public bool Estado { get; set; }
+        public bool Estado { get; set; }
     }
 }

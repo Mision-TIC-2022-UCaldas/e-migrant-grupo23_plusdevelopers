@@ -27,6 +27,7 @@ namespace MyApp.Namespace
             {
                 return Page();
             }
+            Novedad.Estado = true;
             _repoNovedad.CrearNovedad(Novedad);
             return RedirectToPage("./List");
         }

@@ -30,6 +30,7 @@ namespace EMigrant.App.Frontend
             services.AddSingleton<RepositorioTipoServicio>(new RepositorioTipoServicio(new EMigrant.App.Persistencia.AppRepositorios.AppContext()));
             services.AddSingleton<RepositorioEntidad>(new RepositorioEntidad(new EMigrant.App.Persistencia.AppRepositorios.AppContext()));
             services.AddSingleton<RepositorioNovedad>(new RepositorioNovedad(new EMigrant.App.Persistencia.AppRepositorios.AppContext()));
+            services.AddSingleton<RepositorioServicio>(new RepositorioServicio(new EMigrant.App.Persistencia.AppRepositorios.AppContext()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

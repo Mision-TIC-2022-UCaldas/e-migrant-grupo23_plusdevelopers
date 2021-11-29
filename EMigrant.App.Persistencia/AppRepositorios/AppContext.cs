@@ -11,6 +11,8 @@ namespace EMigrant.App.Persistencia.AppRepositorios
 
         public DbSet<Novedad> Novedades {get;set;}
 
+        public DbSet<Servicio> Servicios {get;set;}
+
         private const string connectionString = @"Server=localhost;Database=BDEmigrant;User=sa;Password=hackatonucaldas2021;";
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
