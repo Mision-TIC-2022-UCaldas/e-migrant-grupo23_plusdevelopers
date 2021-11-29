@@ -4,14 +4,16 @@ using EMigrant.App.Persistencia.AppRepositorios;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EMigrant.App.Persistencia.Migrations
 {
     [DbContext(typeof(Persistencia.AppRepositorios.AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20211128232431_AgregoTablaNovedad")]
+    partial class AgregoTablaNovedad
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
