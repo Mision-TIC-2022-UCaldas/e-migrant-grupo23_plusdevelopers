@@ -1,0 +1,49 @@
+﻿@page
+@model MyApp.Namespace.ListNovedadesModel
+@{
+}
+<div class="text-center" style="padding-top: 2%;">
+    <h2>Gestión de novedades</h2>
+</div>
+<br>
+<div class="col-md-5 contenedor-btn-agregar">
+    <a class="btn btn-success boton-agregar" asp-page="./Create">
+        <i class="fas fa-plus-circle"></i>
+        <span class="tooltip">Agregar novedad</span>
+    </a>
+</div>
+<br>
+<br>
+<div class="text-center" >
+    <table class="table table-hover">
+        <tr>
+            <th>Fecha</th>
+            <th>Número días</th>
+            <th>Texto explicativo</th>
+            <th>Estado</th>
+            <th>Modificar</th>
+        </tr>
+        @foreach (var novedad in Model.Novedades)
+        {
+            <tr>
+                <td>@novedad.Fecha.Date.ToString()</td>
+                <td>@novedad.NumeroDias</td>
+                <td>@novedad.TextoExplicativo</td>
+                <td>
+                    @if(novedad.Estado){
+                        <span>Activo</span>
+                    } else {
+                        <span>Inactivo</span>
+                    }
+                </td>
+                <td class="text-center">
+                    <a class="btn btn-primary table-btn" asp-page="./Edit" asp-route-IdNovedad="@novedad.Id">
+                        <i class="far fa-edit"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br>
+    <h5>Existen @Model.Novedades.Count() novedades en la base de datos.</h5>
+</div>

@@ -1,0 +1,49 @@
+﻿@page
+@model MyApp.Namespace.ListSectoresModel
+@{
+}
+<div class="text-center" style="padding-top: 2%;">
+    <h2>Gestión de sectores</h2>
+</div>
+<br>
+<div class="col-md-5 contenedor-btn-agregar">
+    <a class="btn btn-success boton-agregar" asp-page="./Create">
+        <i class="fas fa-user-plus"></i>
+        <span class="tooltip">Agregar sector</span>
+    </a>
+</div>
+<br>
+<br>
+<div class="text-center" >
+    <table class="table table-hover">
+        <tr>
+            <th>Nombre</th>
+            <th>Detalles</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
+        </tr>
+        @foreach (var sector in Model.Sectores)
+        {
+            <tr>
+                <td>@sector.Nombre</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-IdSector="@sector.Id">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-warning table-btn" asp-page="./Edit" asp-route-IdSector="@sector.Id">
+                        <i class="fas fa-user-edit"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./Delete" asp-route-IdSector="@sector.Id">
+                        <i class="fas fa-user-times"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br>
+    <h5>Existen @Model.Sectores.Count() sectores en la base de datos.</h5>
+</div>

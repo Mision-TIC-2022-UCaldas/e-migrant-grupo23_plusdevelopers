@@ -1,0 +1,65 @@
+﻿@page
+@model MyApp.Namespace.ListModel
+@{
+}
+<div class="text-center" style="padding-top: 2%;">
+    <h2>Gestión de entidades</h2>
+</div>
+<br>
+<div class="col-md-5 contenedor-btn-agregar">
+    <a class="btn btn-success boton-agregar" asp-page="./Create">
+        <i class="fas fa-user-plus"></i>
+        <span class="tooltip">Agregar entidad</span>
+    </a>
+</div>
+<br>
+<br>
+<div class="text-center" >
+    <table class="table table-hover">
+        <tr>
+            <th>Razón social</th>
+            <th>Nit</th>
+            <th>Dirección</th>
+            <th>Ciudad</th>
+            <th>Teléfono</th>
+            <th>Correo electrónico</th>
+            <th>Página web</th>
+            <th>Sector</th>
+            <th>Tipo servicio</th>
+            <th>Detalles</th>
+            <th>Actualizar</th>
+            <th>Eliminar</th>
+        </tr>
+        @foreach (var entidad in Model.Entidades)
+        {
+            <tr>
+                <td>@entidad.RazonSocial</td>
+                <td>@entidad.Nit</td>
+                <td>@entidad.Direccion</td>
+                <td>@entidad.Ciudad</td>
+                <td>@entidad.Telefono</td>
+                <td>@entidad.CorreoElectronico</td>
+                <td>@entidad.PaginaWeb</td>
+                <td>@Model.consultarSector(entidad.SectorId)</td>
+                <td>@Model.consultarTipoServicio(entidad.TipoServicioId)</td>
+                <td>
+                    <a class="btn btn-primary table-btn" asp-page="./Details" asp-route-IdEntidad="@entidad.Id">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-warning table-btn" asp-page="./Edit" asp-route-IdEntidad="@entidad.Id">
+                        <i class="fas fa-user-edit"></i>
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger table-btn" asp-page="./Delete" asp-route-IdEntidad="@entidad.Id">
+                        <i class="fas fa-user-times"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+    <br>
+    <h5>Existen @Model.Entidades.Count() entidades en la base de datos.</h5>
+</div>
